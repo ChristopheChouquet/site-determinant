@@ -1,6 +1,6 @@
 {
   "name": "website_determinant",
-  "homepage": "http://{ChristopheChouquet}.github.io/{site-determinant}",
+  "homepage": "http://ChristopheChouquet.github.io/site-determinant",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
