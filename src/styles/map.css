@@ -1,0 +1,4 @@
+.gm-style .gmnoprint {
+    display: flex;
+    flex-direction: row-reverse;
+}

@@ -1,0 +1,224 @@
+.App {
+  text-align: center;
+}
+
+body{
+  background-color: #F4F4F4;
+  overflow-x: hidden;
+  -webkit-touch-callout: none; 
+  -webkit-user-select: none; 
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+   
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+/* Cible toutes les barres de défilement */
+::-webkit-scrollbar {
+  width: 10px; /* Largeur de la barre de défilement */
+}
+
+/* Track/Axe de la barre de défilement */
+::-webkit-scrollbar-track {
+  background: #000000; /* Couleur de fond de l'axe */
+}
+
+/* Handle/Curseur de la barre de défilement */
+::-webkit-scrollbar-thumb {
+  background: #006285; /* Couleur du curseur */
+  border-radius: 5px; /* Arrondit les coins du curseur */
+}
+
+/* En survolant le curseur */
+::-webkit-scrollbar-thumb:hover {
+  background: #003A54; /* Couleur du curseur au survol */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* HEADER BACKGROUND */
+#headerVisuel.home {
+  background-image: url('../../public/images/home/header_background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  transition: all 0.1s ease-in-out;
+}
+#headerVisuel.metiers {
+  background-image: url('../../public/images/metiers/header_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  transition: all 0.1s ease-in-out;
+}
+#headerVisuel.domaines {
+  background-image: url('../../public/images/domaines/header_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  transition: all 0.1s ease-in-out;
+}
+#headerVisuel.rd {
+  background-image: url('../../public/images/RD/Header_BG_RD.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  transition: all 0.1s ease-in-out;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  #headerVisuel.home {
+    background-image: url('../../public/images/home/header_background_mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  #headerVisuel.metiers {
+    background-image: url('../../public/images/metiers/header_background_mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    transition: all 0.1s ease-in-out;
+  }
+  #headerVisuel.domaines {
+    background-image: url('../../public/images/domaines/header_background_mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    transition: all 0.1s ease-in-out;
+  }
+  #headerVisuel.rd {
+    background-image: url('../../public/images/RD/Header_BG_RD_mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    transition: all 0.1s ease-in-out;
+  }
+}
+
+/* METIERS */
+.custom-bullet-list { 
+  list-style: none;
+  list-style-position: inside;
+}
+.native-bullet-list{
+  list-style-type: disc;
+}
+
+.custom-bullet-list li {
+    text-indent: -2em;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.custom-bullet-list li::before { 
+  background-image: url('../../public/images/metiers/puce.png'); /* remplace les puces par votre svg */
+  content: ''; /* contenu vide */
+  display: inline-block;
+  height: 20px; /* hauteur de votre puce */
+  width: 20px; /* largeur de votre puce */
+  background-size: contain; /* assure que le svg s'adapte à la taille spécifiée ci-dessus sans déformation */
+  background-repeat: no-repeat; 
+  margin-right: 10px; 
+}
+
+/* R & D */
+.bg-projet{
+  background-image: url('../../public/images/RD/BG_projets.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  transition: all 0.1s ease-in-out;
+}
+
+/* Contact */
+.marqueur{
+  cursor: pointer;
+  fill: #00628B;
+  transition: all 0.1s ease-in-out;
+}
+.marqueur:hover{
+  fill: black;
+}
+.text-marqueur{
+  font-size: 1em;
+  font-weight: bold;
+  fill: black;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.1s ease-in-out;
+}
+.agence-OK{
+  opacity : 0.5;
+  fill: #BE1622;
+}
+.agence-NOK{
+  opacity : 0.3;
+  fill: #BE1622;
+}
+
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-down {
+  animation: slide-down 0.5s ease-out;
+}
+  
+
